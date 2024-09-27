@@ -1,0 +1,14 @@
+<div class="h-[48px] bg-[#000]">
+  <div class="container  text-[#fff] h-full flex items-center justify-end">
+    <div class="group relative w-[170px]  ">
+      <div class="cursor-pointer flex justify-between items-center">
+        <p><%= t ".choose_lang" %></p>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="hidden group-hover:block absolute top-full right-0 left-0 flex-col bg-black p-3 rounded-lg z-10">
+        <p><%= link_to "English", locale:"en" %></p>
+        <p><%= link_to "Vietnamese", locale:"vi" %></p>
+      </div>
+    </div>
+  </div>
+</div>

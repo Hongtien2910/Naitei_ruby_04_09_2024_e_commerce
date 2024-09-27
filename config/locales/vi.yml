@@ -1,2 +1,27 @@
 vi:
   hello: "Xin chào"
+  layouts:
+    language:
+      choose_lang: "Chọn ngôn ngữ"
+    header:
+      home: "Trang chủ"
+      contact: "Liên hê"
+      help: "Giúp đỡ"
+      sign_in: "Đăng nhập"
+      type_book: "Tìm kiếm sách tại đây"
+      profile: "Tài khoản"
+      order: "Đơn hàng của tôi"
+      log_out_confirm: "Bạn có chắc không?"
+      log_out: "Đăng xuất"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      sign_up_now!: "Đăng ký ngay!"
+      new_user?: "Người dùng mới?"
+      password: "Mật Khẩu"
+      remember_me: "Duy trì đăng nhập trên thiết bị này"
+      forgot_password: "Quên mật khẩu?"
+    create:
+      successful: "Đăng nhập thành công!"
+      invalid: "Email hoặc mật khẩu không chính xác"
+      not_activated: "Tài khoản chưa kích hoạt. Vui lòng kiểm tra email để kích hoạt tài khoản"

@@ -1,0 +1,12 @@
+<% flash.each do |message_type, message| %>
+  <div class="<%= case message_type
+    when 'success'
+      'text-green-600 bg-green-200'
+    when 'danger'
+      'text-red-600 bg-red-200'
+    else
+      'text-yellow-600 bg-yellow-200'
+    end %> p-4 rounded mb-4">
+    <%= message %>
+  </div>
+<% end %>

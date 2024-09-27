@@ -1,0 +1,52 @@
+<header>
+  <%= render "layouts/language" %>
+  <div class="h-[72px] bg-white  flex items-center border-b-primary border-b-[1px] border-solid">
+    <div class="container flex justify-between items-center">
+      <%= link_to root_path, class: "flex gap-2 items-center" do %>
+        <%= image_tag "Logo.svg", alt: "Logo", class: "w-[60px] h-[25px]" %>
+        <p class="w-[60px] text-xs text-primary pl-2 border-l-primary border-l-[1px] border-solid">We love book</p>
+      <% end %>
+      <%= form_with method: :get, local: true, html: { class: "flex justify-center bg-[#F1F1F1] rounded-sm overflow-hidden" } do |form| %>
+        <%= form.text_field :query, placeholder: t(".type_book"), class: "border-none bg-inherit text-sm w-80 outline-none" %>
+        <button type="submit" class="ml-4 px-4 py-2 bg-primary text-white rounded-sm hover:opacity-70 text-lg flex items-center">
+          <i class="fas fa-search w-5 h-5"></i>
+        </button>
+      <% end %>
+      <nav class="text-sm text-[#7B7881] flex items-center gap-[20px]">
+        <ul class="flex gap-[20px] list-none">
+          <li><%= link_to t(".home"), root_path(locale: I18n.locale) %></li>
+          <li><%= link_to t(".contact") %></li>
+          <li><%= link_to t(".help") %></li>
+          <% if logged_in? %>
+            <div class="text-primary flex gap-[15px] items-center">
+              <div class="relative z-0">
+                <i class="fa-solid fa-cart-shopping text-xl"></i>
+                <span id="cart-items" class="absolute rounded-full top-[-10px] right-[-10px]  w-[20px] h-[20px] flex items-center justify-center text-white text-sm bg-red-600">2</span>
+              </div>
+              <div class="bg-primary w-[2px] h-full"></div>
+              <div class="group relative ">
+                <i class="fa-solid fa-user text-xl cursor-pointer"></i>
+                <div class="hidden group-hover:flex absolute top-full left-[-50px] py-[10px] text-base flex-col items-center gap-[10px] w-[200px] bg-white rounded-lg z-10 drop-shadow ">
+                  <p class="cursor-pointer">
+                    <i class="fa-solid fa-user"></i>
+                    <%= link_to t(".profile") %></p>
+                  <p class="cursor-pointer">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <%= link_to t(".order") %>
+                  </p>
+                  <div class="w-full h-[1px] bg-primary" ></div>
+                  <p class="text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <%= link_to t(".log_out"), logout_path, data: { turbo_method: :delete, turbo_confirm: t(".log_out_confirm") } %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% else %>
+            <li><%= link_to t(".sign_in"), login_path(locale: I18n.locale) %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

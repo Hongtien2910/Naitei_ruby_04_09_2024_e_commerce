@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTutorial</title>
+    <title><%= full_title yield :title%></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <main>
+    <%= render "layouts/header" %>
+    <main class="container mt-[30px]">
+      <%= render "layouts/notification" %>
       <%= yield %>
     </main>
   </body>
