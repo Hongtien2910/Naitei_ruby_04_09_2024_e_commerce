@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         primary: '#937DC2',
+        primary_hover: '#BEB1DA',
       },
       container: {
         center: true,

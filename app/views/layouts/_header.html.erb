@@ -15,8 +15,8 @@
       <nav class="text-sm text-[#7B7881] flex items-center gap-[20px]">
         <ul class="flex gap-[20px] list-none">
           <li><%= link_to t(".home"), root_path(locale: I18n.locale) %></li>
-          <li><%= link_to t(".contact") %></li>
-          <li><%= link_to t(".help") %></li>
+          <li><%= link_to t(".contact"), static_pages_contact_path(locale: I18n.locale) %></li>
+          <li><%= link_to t(".help"), static_pages_help_path(locale: I18n.locale) %></li>
           <% if logged_in? %>
             <div class="text-primary flex gap-[15px] items-center">
               <div class="relative z-0">
