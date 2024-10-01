@@ -14,6 +14,21 @@ vi:
       order: "Đơn hàng của tôi"
       log_out_confirm: "Bạn có chắc không?"
       log_out: "Đăng xuất"
+    footer:
+      home: "Trang chủ"
+      contact: "Liên hê"
+      help: "Giúp đỡ"
+  static_pages:
+    contact:
+      get_in: "Liên lạc"
+      message: "Chúng tôi rất coi trọng ý kiến của khách hàng và cam kết cung cấp dịch vụ tốt nhất để đáp ứng nhu cầu của bạn. Nếu bạn có bất kỳ câu hỏi nào về sản phẩm, đơn hàng, hoặc cần hỗ trợ, đừng ngần ngại liên hệ với chúng tôi."
+      address: "Đà Nẵng, Việt Nam"
+      submit: "Bắt đầu"
+      fullname: "Họ và tên"
+      phone_number: "Số điện thoại"
+    help:
+      search: "Tìm kiếm"
+      question: "Các câu hỏi thường gặp"
   sessions:
     new:
       login: "Đăng nhập"

@@ -14,6 +14,21 @@ en:
       order: "My orders"
       log_out_confirm: "Are you sure?"
       log_out: "Log out"
+    footer:
+      home: "Home"
+      contact: "Contact"
+      help: "Help"
+  static_pages:
+    contact:
+      get_in: "Get in touch"
+      message: "We value customer opinions and are committed to providing the best service to meet your needs. If you have any questions about the product, order, or need assistance, don't hesitate to contact us."
+      address: "Da Nang, Viet Nam"
+      submit: "Submit"
+      fullname: "Fullname"
+      phone_number: "Telephone"
+    help:
+      search: "Search"
+      question: "Frequently asked questions"
   sessions:
     new:
       login: "Login"

@@ -1,0 +1,19 @@
+<footer class="bg-gray-100">
+  <div class="container py-8 flex flex-col md:flex-row justify-between items-center">
+    <div class="flex flex-col items-center md:items-start">
+      <%= image_tag "Logo.svg", alt: "Logo", class: "w-[80px] h-[30px] mb-2" %>
+      <p class="text-xs text-gray-600">We love book</p>
+    </div>
+    <nav class="mt-4 md:mt-0">
+      <ul class="flex flex-col md:flex-row gap-8 list-none">
+        <li><%= link_to t(".home"), root_path(locale: I18n.locale), class: "text-sm text-gray-600 hover:text-primary" %></li>
+        <li><%= link_to t(".contact"), static_pages_contact_path(locale: I18n.locale), class: "text-sm text-gray-600 hover:text-primary" %></li>
+        <li><%= link_to t(".help"), static_pages_help_path(locale: I18n.locale), class: "text-sm text-gray-600 hover:text-primary" %></li>
+      </ul>
+    </nav>
+    <div class="mt-4 md:mt-0 text-center">
+      <p class="text-sm text-gray-600">&copy; <%= Time.current.year %> We love book. All rights reserved.</p>
+      <p class="text-sm text-gray-600">Made with ❤️ ECommerce-Team</p>
+    </div>
+  </div>
+</footer>
