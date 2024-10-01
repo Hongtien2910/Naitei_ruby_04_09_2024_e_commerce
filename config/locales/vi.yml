@@ -1,5 +1,6 @@
 vi:
   hello: "Xin chào"
+  page_title: "B-World | Chúng ta yêu sách"
   layouts:
     language:
       choose_lang: "Chọn ngôn ngữ"

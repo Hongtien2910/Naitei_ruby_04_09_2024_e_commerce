@@ -1,5 +1,6 @@
 en:
   hello: "Hello world"
+  page_title: "B-World | We love book"
   layouts:
     language:
       choose_lang: "Choose language"
