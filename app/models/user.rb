@@ -16,6 +16,18 @@ password_confirmation avatar).freeze
 
   enum role: {customer: 0, admin: 1}
 
+  USER_ADMIN_ATTRIBUTES = %i(user_name email role activated).freeze
+
+  scope :by_activation_status, lambda {|status|
+                                 where(activated: status) if status.present?
+                               }
+  scope :sorted, lambda {|column, direction|
+    order("#{column} #{direction}") if column.present?
+  }
+  def self.filtered_and_sorted params
+    by_activation_status(params[:activated]).sorted(params[:sort],
+                                                    params[:direction])
+  end
   before_save :downcase_email
 
   validates :user_name, presence: true,
